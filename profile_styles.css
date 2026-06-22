@@ -35,6 +35,13 @@ html { font-size: 16px; -webkit-text-size-adjust: 100%; }
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('./assets/Ethnocentric-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   font-family: var(--font-body);
   background: var(--bg-deeper);
@@ -174,7 +181,7 @@ svg { display: block; flex-shrink: 0; }
    ============================================================= */
 .ticker {
   position: relative; z-index: 40; flex-shrink: 0;
-  height: 52px; margin-top: 8px; overflow: hidden;          /* taller + lowered below the status bar */
+  height: 45px; margin-top: 8px; overflow: hidden;          /* taller + lowered below the status bar */
   background: linear-gradient(90deg, rgba(3,10,22,0.97), rgba(5,16,34,0.97));
   border-top: 1px solid rgba(236,255,67,0.22);
   border-bottom: 1px solid rgba(65,156,212,0.24);
@@ -231,8 +238,8 @@ svg { display: block; flex-shrink: 0; }
   backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
 
 /* page title (in-app big header like GAMES / RISK ANALYZER) */
-.page-title { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.03em;
-  font-size: 29px; line-height: 1.08; margin: 6px 4px 10px; padding-bottom: 2px;
+.page-title { font-family: 'Ethnocentric', sans-serif; font-weight: 800; letter-spacing: -0.03em;
+  font-size: 21px; line-height: 1.08; margin: 6px 4px 8px; padding-bottom: 2px;
   background: linear-gradient(120deg,#fff 0%, var(--accent-light) 70%, var(--yellow) 130%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .page-title-row { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
@@ -421,7 +428,8 @@ svg { display: block; flex-shrink: 0; }
   cursor: pointer; }
 .pc-head .pc-grad { position: absolute; inset: 0; z-index: 0; opacity: 0.85; }
 .pc-head .pc-info { position: relative; z-index: 1; }
-.pc-head .pc-name { font-family: var(--font-display); font-size: 16px; font-weight: 800; font-style: italic; text-shadow: 0 1px 8px rgba(0,0,0,0.5); }
+.pc-head 
+.pc-name { font-family: 'Ethnocentric', sans-serif; font-size: 14px; font-weight: 800; font-style: italic; text-shadow: 0 1px 8px rgba(0,0,0,0.5); }
 .pc-head .pc-meta { font-size: 10.5px; color: rgba(255,255,255,0.82); margin-top: 2px; }
 .pc-head .pc-chev { position: relative; z-index: 1; color: #fff; transition: transform .3s; }
 .player-card.open .pc-chev { transform: rotate(180deg); }
