@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- keep relative assets resolving from the site root, even on secret /slug links -->
+  <!-- <base href="/"> -->
+  <title>BTA Sports — Interactive App Prototype</title>
+  <meta name="description" content="Interactive prototype of the BTA Sports app — the AI decision engine for MLB, NFL & FIFA. Live edge ticker, Game Analyzer, Risk Analyzer, Fantasy IQ.">
+  <meta name="theme-color" content="#050d1e">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BTA Sports — Interactive App Prototype">
+  <meta property="og:description" content="A redesigned, fully interactive BTA Sports app demo in the liquid-glass house style. Bloomberg-style edge ticker, live Move-the-Line, Risk Analyzer & Fantasy IQ.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profile_styles.css">
+</head>
+<body>
+
+  <!-- AURORA BACKDROP -->
+  <div class="aurora" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="stage">
+
+    <!-- DEVICE -->
+    <div class="device-wrap">
+      <div class="device" id="device">
+        <div class="screen">
+
+          <!-- STATUS BAR (iPhone-style) -->
+          <div class="statusbar">
+            <span class="sb-time" id="sbTime">9:41</span>
+            <span class="sb-icons">
+              <!-- cellular -->
+              <svg class="sb-cell" width="18" height="12" viewBox="0 0 18 12" fill="currentColor" aria-hidden="true">
+                <rect x="0"  y="8"   width="3" height="4"   rx="1"/>
+                <rect x="5"  y="5.5" width="3" height="6.5" rx="1"/>
+                <rect x="10" y="3"   width="3" height="9"   rx="1"/>
+                <rect x="15" y="0"   width="3" height="12"  rx="1"/>
+              </svg>
+              <!-- wifi -->
+              <svg class="sb-wifi" width="17" height="12" viewBox="0 0 17 12" fill="currentColor" aria-hidden="true">
+                <path d="M8.5 1.4c3 0 5.8 1.1 7.9 3l-1.6 1.7A9 9 0 0 0 8.5 4.6 9 9 0 0 0 2.2 6.1L.6 4.4A11.4 11.4 0 0 1 8.5 1.4Z"/>
+                <path d="M8.5 5.6c1.8 0 3.5.7 4.8 1.9l-1.7 1.7a4.4 4.4 0 0 0-6.2 0L3.7 7.5A6.8 6.8 0 0 1 8.5 5.6Z"/>
+                <circle cx="8.5" cy="10.4" r="1.5"/>
+              </svg>
+              <!-- battery (white) -->
+              <span class="sb-batt" aria-label="Battery full">
+                <svg width="27" height="13" viewBox="0 0 27 13" fill="none" aria-hidden="true">
+                  <rect x="0.6" y="0.6" width="22.8" height="11.8" rx="3.4" stroke="#fff" stroke-opacity="0.55" stroke-width="1.1"/>
+                  <rect x="2.2" y="2.2" width="19.6" height="8.6" rx="2.1" fill="#fff"/>
+                  <path d="M25.2 4.3v4.4c.86-.18 1.4-.83 1.4-1.7v-1c0-.87-.54-1.52-1.4-1.7Z" fill="#fff" fill-opacity="0.55"/>
+                </svg>
+              </span>
+            </span>
+          </div>
+
+          <!-- BLOOMBERG-STYLE BEST-BETS TICKER -->
+          <div class="ticker" id="ticker" aria-label="Best bets edge ticker">
+            <div class="ticker-tag"><span class="live-dot"></span> EDGE</div>
+            <div class="ticker-track" id="tickerTrack"></div>
+          </div>
+
+          <!-- VIEWPORT -->
+          <div class="viewport" id="viewport">
+            <section class="view active" id="view-profile"></section>
+          </div>
+
+          <!-- TOAST -->
+          <div class="toast" id="toast"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="profileOnly.js"></script>
+</body>
+</html>
